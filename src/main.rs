@@ -1,17 +1,11 @@
 mod people;
-
-pub mod Utils {
-    pub trait Person {
-        fn greet(&self);
-    }
-
-    pub const PEOPLE: Vec<&'static dyn Person> = vec![];
-}
+mod person;
+use people::get_people;
 
 fn main() {
-    println!("Length {}", Utils::PEOPLE.len());
-    for person in Utils::PEOPLE {
-        println!("Greet");
+    let people = get_people();
+    println!("Length {}", people.len());
+    for person in people {
         person.greet();
     }
 }

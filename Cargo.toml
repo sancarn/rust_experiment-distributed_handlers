@@ -1,4 +1,5 @@
 [package]
+build = "build.rs"
 edition = "2021"
 name = "distributed_handlers"
 version = "0.1.0"
